@@ -1,0 +1,75 @@
+{
+    "id": 1,
+    "name": "Antonio Marcos",
+    "store": {
+        "id": 1,
+        "description": "Matriz"
+    },
+    "profile": {
+        "id": 1,
+        "description": "Admin",
+        "mainScreenUrl": "/kds",
+        "mainPermissionId": 8,
+        "menuAccessList": [
+            {
+                "id": 7,
+                "description": "Estações",
+                "subMenuAccessList": [
+                    {
+                        "id": 4,
+                        "description": "Expo Balcão",
+                        "stationId": 2,
+                        "url": "/kds"
+                    },
+                    {
+                        "id": 5,
+                        "description": "Expo Delivery",
+                        "stationId": 3,
+                        "url": "/kds"
+                    },
+                    {
+                        "id": 3,
+                        "description": "Window",
+                        "stationId": 1,
+                        "url": "/kds"
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "description": "Estações em lista",
+                "permissionId": 8,
+                "subMenuAccessList": [
+                    {
+                        "id": 8,
+                        "description": "Broiler",
+                        "stationId": 6,
+                        "url": "/kds"
+                    },
+                    {
+                        "id": 6,
+                        "description": "Fry",
+                        "stationId": 4,
+                        "url": "/kds"
+                    },
+                    {
+                        "id": 7,
+                        "description": "Plato Nacho",
+                        "stationId": 5,
+                        "url": "/kds"
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "description": "Alerta",
+                "url": "/alerta"
+            },
+            {
+                "id": 9,
+                "description": "Sair",
+                "url": "/auth/kitchen/login"
+            }
+        ]
+    }
+}

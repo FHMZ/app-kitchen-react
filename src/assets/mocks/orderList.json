@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1326,
+        "sequentialOrder": 1,
+        "orderNumber": 1732,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "statusItem": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "orderTime": "19:31",
+        "entryType": "Salão",
+        "server": "Adriana Marques",
+        "item": 2829,
+        "descriptionItem": "BONELESS",
+        "quantity": 1,
+        "preparationTime": "100:09",
+        "isItem": true,
+        "referenceOrder": 301118,
+        "preparationTimeItem": 100,
+        "remainingPreparationTime": 0
+    },
+    {
+        "id": 1326,
+        "sequentialOrder": 2,
+        "orderNumber": 1732,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "statusItem": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "orderTime": "19:31",
+        "entryType": "Salão",
+        "server": "Adriana Marques",
+        "item": 2830,
+        "descriptionItem": "1/2 WINGS",
+        "quantity": 1,
+        "preparationTime": "100:09",
+        "isItem": true,
+        "referenceOrder": 301118,
+        "preparationTimeItem": 0,
+        "remainingPreparationTime": 0
+    }, 
+    {
+        "id": 1326,
+        "sequentialOrder": 3,
+        "orderNumber": 1733,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "statusItem": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "orderTime": "19:31",
+        "entryType": "Salão",
+        "server": "Adriana Marques",
+        "item": 2830,
+        "descriptionItem": "1/2 WINGS",
+        "quantity": 1,
+        "preparationTime": "100:09",
+        "isItem": true,
+        "referenceOrder": 301118,
+        "preparationTimeItem": 0,
+        "remainingPreparationTime": 0
+    }
+]
