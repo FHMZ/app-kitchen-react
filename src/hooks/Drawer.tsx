@@ -7,7 +7,7 @@ export const useSwipeableDrawer = () => {
 }
 
 export const useMenuDrawer = () => {
-  const [drawerOpen, setDrawerOpen] = useState(true)
+  const [drawerOpen, setDrawerOpen] = useState(false)
   const onMenuDrawerOpen = () => setDrawerOpen(!drawerOpen)
   return { onMenuDrawerOpen, drawerOpen }
 }

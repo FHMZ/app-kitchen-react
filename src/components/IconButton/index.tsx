@@ -1,8 +1,7 @@
-import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded'
-import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded'
-import IconButton from '@mui/material/IconButton'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDownRounded'
 import React from 'react'
 import { TEdges } from '../../utils/constants'
+import { StyledExpand } from './style'
 
 interface IExpandIconButtonProps {
   edge?: TEdges
@@ -10,26 +9,18 @@ interface IExpandIconButtonProps {
   onClick: () => void
 }
 
-interface IExpandedIconProps {
-  expand: boolean
-}
-
-export const ExpandIcons: React.FC<IExpandedIconProps> = ({ expand }) => (
-  <>
-    {expand ? (
-      <KeyboardArrowUpRoundedIcon fontSize="small" />
-    ) : (
-      <KeyboardArrowDownRoundedIcon fontSize="small" />
-    )}
-  </>
-)
-
-export const ExpandIconButton: React.FC<IExpandIconButtonProps> = ({
+export const ExpandIconButtonSmall: React.FC<IExpandIconButtonProps> = ({
   edge,
   expand,
   onClick,
 }) => (
-  <IconButton size="small" edge={edge} color="default" onClick={onClick}>
-    <ExpandIcons expand={expand} />
-  </IconButton>
+  <StyledExpand
+    size="small"
+    expand={expand}
+    edge={edge}
+    color="default"
+    onClick={onClick}
+  >
+    <KeyboardArrowDownIcon fontSize="small" />
+  </StyledExpand>
 )

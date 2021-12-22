@@ -1,12 +1,13 @@
-import { CardActionArea, List, Zoom } from '@mui/material'
+import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectoryRounded'
+import TwoWheelerIcon from '@mui/icons-material/TwoWheelerRounded'
+import { CardActionArea, List, Stack, Zoom } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { CardBorderColor } from '../../../../components/Card'
 import { DividerMiddle } from '../../../../components/Divider'
-import Grid from '../../../../components/Grid'
-import { TypographyBoldCenter } from '../../../../components/Typography'
+import Grid, { GridFlexStart } from '../../../../components/Grid'
 import { useOrderCard } from '../../../../hooks/Order'
 import { IOrderCardView } from '../../../../models/order'
 import { EStatus, EStatusId } from '../../../../utils/enums'
+import ChipMedium from '../Chip'
 import CardListItem from '../ListItem'
 import StationIcon from '../Station'
 import {
@@ -14,6 +15,7 @@ import {
   StyledCardActions,
   StyledCardActionsTypography,
   StyledCardContent,
+  StyledCardHeader
 } from './style'
 
 interface IOrderCardProps {
@@ -21,9 +23,18 @@ interface IOrderCardProps {
 }
 
 interface ICardProps {
-  onClick: () => void
-  bgColor: string
   children: React.ReactNode
+}
+
+interface ICardHeaderProps {
+  onClick: () => any
+  order: IOrderCardView
+  bgColor: string
+}
+
+interface ICardSubHeaderProps {
+  order: IOrderCardView
+  delivery: boolean
 }
 
 interface ICardActionsProps {
@@ -31,60 +42,55 @@ interface ICardActionsProps {
   delivery: boolean
 }
 
-const Card: React.FC<ICardProps> = ({ onClick, bgColor, children }) => (
+const Card: React.FC<ICardProps> = ({ children }) => (
   <Grid item xs={12} sm={12} md={6} lg={3}>
     <Zoom in={true} timeout={320}>
-      <StyledCard color={bgColor} onClick={onClick}>
-        <CardActionArea>{children}</CardActionArea>
-      </StyledCard>
+      <StyledCard>{children}</StyledCard>
     </Zoom>
   </Grid>
 )
 
-const CardHeader: React.FC<IOrderCardProps> = ({ order }) => (
-  <>
-    <Grid
-      item
-      container
-      paddingTop={2}
-      paddingRight={2}
-      paddingLeft={2}
-      sm
-      xs={12}
-    >
-      <StyledCardActionsTypography direction="right" variant="subtitle2">
-        {`CHK${order.orderNumber}`}
-      </StyledCardActionsTypography>
-      <StyledCardActionsTypography direction="left" variant="subtitle2">
-        {order.remainingPreparationTimeString}
-      </StyledCardActionsTypography>
-    </Grid>
-    <Grid
-      item
-      container
-      paddingTop={0.5}
-      paddingRight={2}
-      paddingLeft={2}
-      paddingBottom={0.5}
-      sm
-      xs={12}
-    >
-      <StationIcon stations={order.stationList} />
-    </Grid>
-  </>
+const CardHeader: React.FC<ICardHeaderProps> = ({
+  onClick,
+  order,
+  bgColor,
+}) => (
+  <CardActionArea onClick={onClick}>
+    <StyledCardHeader color={bgColor}>
+      <GridFlexStart sm>
+        <StyledCardActionsTypography direction="right" variant="body2">
+          {`CHK${order.orderNumber}`}
+        </StyledCardActionsTypography>
+        <StyledCardActionsTypography direction="left" variant="body2">
+          {order.remainingPreparationTimeString}
+        </StyledCardActionsTypography>
+      </GridFlexStart>
+      <GridFlexStart sm>
+        <StationIcon stations={order.stationList} />
+      </GridFlexStart>
+    </StyledCardHeader>
+  </CardActionArea>
 )
 
-const CardSubHeader: React.FC<IOrderCardProps> = ({ order }) => (
-  <>
-    <TypographyBoldCenter p={0.5} text="Zona A" variant="subtitle2" />
-    <DividerMiddle />
-    <TypographyBoldCenter
-      p={0.5}
-      text={order.entryType.description}
-      variant="subtitle2"
-    />
-  </>
-)
+const CardSubHeader: React.FC<ICardSubHeaderProps> = ({ order, delivery }) => {
+  let color = 'primary'
+  let Icon = <TwoWheelerIcon fontSize="small" />
+  if (!delivery) {
+    color = 'success'
+    Icon = <StoreMallDirectoryIcon fontSize="small" />
+  }
+  return (
+    <Stack direction="row" spacing={0.5} margin={1} marginLeft={2}>
+      <ChipMedium label={`Pedido ${order.orderCount}`} />
+      <ChipMedium
+        color={color}
+        icon={Icon}
+        label={order.entryType.description}
+      />
+      <ChipMedium label="Zona A" />
+    </Stack>
+  )
+}
 
 const CardActions: React.FC<ICardActionsProps> = ({ order, delivery }) => {
   const SecondaryActionView = () => (
@@ -146,25 +152,18 @@ const OrderCard: React.FC<IOrderCardProps> = ({ order }) => {
   }
 
   return (
-    <Card bgColor={bgColor} onClick={handleOrderChange}>
-      <CardBorderColor delivery={isDelivery}>
-        <CardHeader order={order} />
-        <CardSubHeader order={order} />
-        <StyledCardContent>
-          <TypographyBoldCenter
-            p={1}
-            text={`Pedido ${order.orderCount}`}
-            variant="body1"
-          />
-          <List dense={true}>
-            {order.itemList.map((item, i) => (
-              <CardListItem key={i} item={item} />
-            ))}
-          </List>
-        </StyledCardContent>
-        <DividerMiddle />
-        <CardActions order={order} delivery={isDelivery} />
-      </CardBorderColor>
+    <Card>
+      <CardHeader order={order} bgColor={bgColor} onClick={handleOrderChange} />
+      <CardSubHeader order={order} delivery={isDelivery} />
+      <StyledCardContent>
+        <List>
+          {order.itemList.map((item, i) => (
+            <CardListItem key={i} item={item} />
+          ))}
+        </List>
+      </StyledCardContent>
+      <DividerMiddle />
+      <CardActions order={order} delivery={isDelivery} />
     </Card>
   )
 }

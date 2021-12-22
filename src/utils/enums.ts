@@ -19,6 +19,10 @@ export enum EKdsReducerTypes {
   Station = 'STATION',
 }
 
+export enum EEntryTypeId {
+  DELIVERY = 2
+}
+
 export enum EEntryType {
   DELIVERY = "Delivery"
 }

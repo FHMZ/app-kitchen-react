@@ -1,10 +1,18 @@
 import { ClassNameMap } from '@mui/material'
 import MuiButton, { ButtonClasses } from '@mui/material/Button'
 import React from 'react'
-import { TColors, TSizes } from '../../utils/constants'
+import { TSizes } from '../../utils/constants'
 
 type TTypes = 'button' | 'submit' | 'reset' | undefined
 type TVariants = 'text' | 'outlined' | 'contained' | undefined
+type TColors =
+  | 'inherit'
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'error'
+  | 'info'
+  | 'warning'
 
 interface IButtonProps {
   id: string | undefined

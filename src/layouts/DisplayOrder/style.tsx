@@ -3,7 +3,7 @@ import { styled } from '@mui/styles'
 
 export const Container = styled('div')(() => ({
   display: 'flex',
-  backgroundColor: grey[800],//'#222244'
+  backgroundColor: grey[400],//'#222244'
 }))
 
 export const StyledHeaderContent = styled('div')(() => ({

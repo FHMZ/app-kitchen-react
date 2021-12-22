@@ -1,4 +1,4 @@
+import { Divider } from '@mui/material'
 import React from 'react'
-import { StyledDivider } from './style'
 
-export const DividerMiddle: React.FC = () => <StyledDivider variant="middle" />
+export const DividerMiddle: React.FC = () => <Divider variant="middle" />

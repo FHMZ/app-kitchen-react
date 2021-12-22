@@ -3,18 +3,22 @@ import {
   CardActions,
   CardContent,
   styled,
-  Typography,
+  Typography
 } from '@mui/material'
 import { BOX_SHADOW } from '../../../../utils/constants'
 
-export const StyledCard = styled(Card, {
+export const StyledCard = styled(Card)(({ theme }) => ({
+  borderRadius: theme.spacing(1),
+  boxShadow: BOX_SHADOW,
+}))
+
+export const StyledCardHeader = styled('div', {
   shouldForwardProp: (prop) => prop !== 'color',
 })<{
   color: string
 }>(({ color, theme }) => ({
-  borderRadius: theme.spacing(1),
-  boxShadow: BOX_SHADOW,
   backgroundColor: color,
+  padding: theme.spacing(2),
 }))
 
 export const StyledCardContent = styled(CardContent)(() => ({

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import Grid, { GridFlexEnd, GridFlexStart } from '../../components/Grid'
-import { ExpandIconButton } from '../IconButton'
+import { ExpandIconButtonSmall } from '../IconButton'
 import { TypographyBold } from '../Typography'
 import { CardThSorteableIconButton } from './IconButton'
 import { StyledCard } from './style'
@@ -61,7 +61,7 @@ export const CardTbButtonCell: React.FC<ICardTbButtonCellProps> = ({
 }) => (
   <GridFlexEnd sm={sm}>
     <Box margin={0.5}>
-      <ExpandIconButton expand={expand} onClick={onClick} />
+      <ExpandIconButtonSmall expand={expand} onClick={onClick} />
     </Box>
   </GridFlexEnd>
 )

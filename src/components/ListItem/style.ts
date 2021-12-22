@@ -7,15 +7,7 @@ export const StyledAvatar = styled(Avatar)(({ theme }) => ({
   backgroundColor: grey[400],
 }))
 
-export const StyledQuantityLabel = styled(ListItemIcon)(({ theme }) => ({
-  paddingTop: theme.spacing(0),
-  minWidth: theme.spacing(4),
-  color: '#000',
-}))
-
-
 export const StyledListItemIcon = styled(ListItemIcon)(({ theme }) => ({
-  paddingTop: theme.spacing(0),
   minWidth: theme.spacing(5),
   color: '#000',
 }))

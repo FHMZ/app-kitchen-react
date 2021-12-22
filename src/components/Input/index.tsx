@@ -1,7 +1,7 @@
 import MuiInput from '@mui/material/TextField'
 import React, { ChangeEvent } from 'react'
 
-type Sizes = 'small' | 'medium' | undefined
+type Sizes = 'small' | 'medium'
 
 interface IInputProps {
   id?: string

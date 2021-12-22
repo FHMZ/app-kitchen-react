@@ -1,13 +1,9 @@
-import {
-  Divider,
-  ListItemAvatar,
-  ListItemSecondaryAction,
-  ListItemText,
-} from '@mui/material'
+import { Divider, ListItemAvatar, ListItemText } from '@mui/material'
 import MuiListItem from '@mui/material/ListItem'
 import React from 'react'
+import { QuantityLabel } from '../OrderTypography'
 import { TypographyBold } from '../Typography'
-import { StyledAvatar, StyledListItemIcon, StyledQuantityLabel } from './style'
+import { StyledAvatar, StyledListItemIcon } from './style'
 
 interface ListItemProps {
   role?: string
@@ -39,16 +35,6 @@ const ListItem: React.FC<ListItemProps> = ({
     <>{icon !== undefined && <StyledListItemIcon>{icon}</StyledListItemIcon>}</>
   )
 
-  const QuantityLabel = () => (
-    <>
-      {quantity !== undefined && (
-        <StyledQuantityLabel>
-          <TypographyBold text={`${quantity}`} variant="button" />
-        </StyledQuantityLabel>
-      )}
-    </>
-  )
-
   const Avatar = () => (
     <>
       {avatar !== undefined && (
@@ -59,26 +45,21 @@ const ListItem: React.FC<ListItemProps> = ({
     </>
   )
 
-  const SecondaryAction = () => (
-    <>
-      {secondaryAction !== undefined && (
-        <ListItemSecondaryAction>{secondaryAction}</ListItemSecondaryAction>
-      )}
-    </>
-  )
-
   return (
     <>
       {dividerTop && <Divider />}
-      <MuiListItem onClick={onClick} role={role}>
+      <MuiListItem
+        onClick={onClick}
+        role={role}
+        secondaryAction={secondaryAction}
+      >
         <Icon />
-        <QuantityLabel />
+        <QuantityLabel quantity={quantity} />
         <Avatar />
         <ListItemText
-          primary={<TypographyBold text={primary} variant="button" />}
+          primary={<TypographyBold text={primary} variant="body2" />}
           secondary={secondary}
         />
-        <SecondaryAction />
       </MuiListItem>
       {dividerBottom && <Divider />}
     </>

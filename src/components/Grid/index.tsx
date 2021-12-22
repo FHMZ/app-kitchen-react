@@ -1,6 +1,6 @@
 import { GridSize } from '@mui/material'
+import MuiGrid from '@mui/material/Grid'
 import React from 'react'
-import  MuiGrid  from '@mui/material/Grid'
 
 type Directions = 'center' | 'flex-start' | 'flex-end'
 
@@ -32,16 +32,17 @@ interface IGridCenterProps {
 interface IGridFlexProps {
   sm?: boolean | GridSize
   children: React.ReactNode
+  paddingLeft?: number
+  paddingRight?: number
+  paddingTop?: number
+  paddingBottom?: number
 }
 
 interface IContainerProps {
   children: React.ReactNode
 }
 
-export const GridCenter: React.FC<IGridCenterProps> = ({
-  p,
-  children,
-}) => (
+export const GridCenter: React.FC<IGridCenterProps> = ({ p, children }) => (
   <Grid
     container
     direction="row"
@@ -53,7 +54,14 @@ export const GridCenter: React.FC<IGridCenterProps> = ({
   </Grid>
 )
 
-export const GridFlexEnd: React.FC<IGridFlexProps> = ({ sm, children }) => (
+export const GridFlexEnd: React.FC<IGridFlexProps> = ({
+  sm,
+  paddingLeft,
+  paddingRight,
+  paddingTop,
+  paddingBottom,
+  children,
+}) => (
   <Grid
     item
     sm={sm}

@@ -1,4 +1,4 @@
 export interface IEntryType {
-  id: string
+  id: number
   description: string
 }

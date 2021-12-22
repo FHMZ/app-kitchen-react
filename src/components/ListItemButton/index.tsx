@@ -3,20 +3,25 @@ import {
   ListItemAvatar,
   ListItemIcon,
   ListItemSecondaryAction,
-  ListItemText
+  ListItemText,
 } from '@mui/material'
 import MuiListItemButton from '@mui/material/ListItemButton'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import { ISubmenu } from '../../models/menu'
 import { useLoginProvider } from '../../providers/KdsProvider'
-import { ExpandIcons } from '../IconButton'
 import { ListCollapse } from '../List'
-import { StyledAvatar, StyledSubListItemButton } from './style'
+import { QuantityLabel } from '../OrderTypography'
+import {
+  StyledAvatar,
+  StyledExpandIcon,
+  StyledSubListItemButton,
+} from './style'
 
 interface IListItemButtonProps {
   role?: string
   icon?: React.ReactNode
+  quantity?: React.ReactNode
   avatar?: React.ReactNode
   primary: React.ReactNode
   secondary?: React.ReactNode
@@ -28,7 +33,6 @@ interface IListItemButtonProps {
 }
 
 interface IListItemButtonExpandProps {
-  startIcon?: React.ReactNode
   onClick: () => void
   primary: string
   expand: boolean
@@ -41,14 +45,12 @@ interface IListSubItemButtonProps {
 
 export const ListItemButtonExpand: React.FC<IListItemButtonExpandProps> = ({
   onClick,
-  startIcon,
   primary,
   expand,
 }) => (
   <MuiListItemButton onClick={onClick}>
-    {startIcon !== undefined && <ListItemIcon>{startIcon}</ListItemIcon>}
     <ListItemText primary={primary} />
-    <ExpandIcons expand={expand} />
+    <StyledExpandIcon expand={expand} />
   </MuiListItemButton>
 )
 
@@ -61,24 +63,22 @@ export const ListSubItemButton: React.FC<IListSubItemButtonProps> = ({
   const [expand, setExpand] = useState(false)
 
   const history = useHistory()
-  const isSubMenuEmpty = subMenus !== undefined || subMenus === null
+  const hasSubMenu = subMenus !== undefined || subMenus !== null
 
   const handleExpandMenu = () => setExpand(!expand)
 
-  const SubMenus = () => {
-    return (
-      <div>
-        {subMenus.map((subMenu, i) => (
-          <StyledSubListItemButton
-            key={i}
-            onClick={() => handleSubmenuClick(subMenu)}
-          >
-            <ListItemText primary={subMenu.description} />
-          </StyledSubListItemButton>
-        ))}
-      </div>
-    )
-  }
+  const SubMenus = () => (
+    <div>
+      {subMenus.map((subMenu, i) => (
+        <StyledSubListItemButton
+          key={i}
+          onClick={() => handleSubmenuClick(subMenu)}
+        >
+          <ListItemText primary={subMenu.description} />
+        </StyledSubListItemButton>
+      ))}
+    </div>
+  )
 
   const handleSubmenuClick = (subMenu: ISubmenu) => {
     if (subMenu.stationId === undefined) return
@@ -93,9 +93,7 @@ export const ListSubItemButton: React.FC<IListSubItemButtonProps> = ({
         expand={expand}
         onClick={handleExpandMenu}
       />
-      <ListCollapse expand={expand}>
-        {isSubMenuEmpty && <SubMenus />}
-      </ListCollapse>
+      <ListCollapse expand={expand}>{hasSubMenu && <SubMenus />}</ListCollapse>
     </>
   )
 }
@@ -104,6 +102,7 @@ const ListItemButton: React.FC<IListItemButtonProps> = ({
   role,
   icon,
   avatar,
+  quantity,
   primary,
   secondary,
   onClick,
@@ -111,24 +110,37 @@ const ListItemButton: React.FC<IListItemButtonProps> = ({
   dividerTop,
   dividerBottom,
 }) => {
-  const hasIcon = icon !== undefined
-  const hasAvatar = avatar !== undefined
-  const hasSecondaryAction = secondaryAction !== undefined
+  const Icon = () => (
+    <>{icon !== undefined && <ListItemIcon>{icon}</ListItemIcon>}</>
+  )
+
+  const Avatar = () => (
+    <>
+      {avatar !== undefined && (
+        <ListItemAvatar>
+          <StyledAvatar>{avatar}</StyledAvatar>
+        </ListItemAvatar>
+      )}
+    </>
+  )
+
+  const SecondaryAction = () => (
+    <>
+      {secondaryAction !== undefined && (
+        <ListItemSecondaryAction>{secondaryAction}</ListItemSecondaryAction>
+      )}
+    </>
+  )
 
   return (
     <>
       {dividerTop && <Divider />}
       <MuiListItemButton onClick={onClick} role={role}>
-        {hasIcon && <ListItemIcon>{icon}</ListItemIcon>}
-        {hasAvatar && (
-          <ListItemAvatar>
-            <StyledAvatar>{avatar}</StyledAvatar>
-          </ListItemAvatar>
-        )}
+        <Icon />
+        <QuantityLabel quantity={quantity} />
+        <Avatar />
         <ListItemText primary={primary} secondary={secondary} />
-        {hasSecondaryAction && (
-          <ListItemSecondaryAction>{secondaryAction}</ListItemSecondaryAction>
-        )}
+        <SecondaryAction />
       </MuiListItemButton>
       {dividerBottom && <Divider />}
     </>

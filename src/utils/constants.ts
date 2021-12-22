@@ -1,4 +1,4 @@
-import { blue, green, pink, yellow } from '@mui/material/colors'
+import { blue, green, orange, red, yellow } from '@mui/material/colors'
 import { EStatus } from './enums'
 
 export const SWIPEABLE_DRAWER_WIDTH = 250
@@ -8,16 +8,6 @@ export const BOX_SHADOW =
 export const TWENTY_SECONDS = 20000
 export const ALL_DAY_KEY = 'a'
 export const RECALL_KEY = 'r'
-
-export type TColors =
-  | 'inherit'
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'error'
-  | 'info'
-  | 'warning'
-  | undefined
 
 export type TVariants =
   | 'h1'
@@ -52,16 +42,16 @@ export type TOrderStatus =
 export const getStatusColor = (status: TOrderStatus) => {
   switch (status) {
     case EStatus.PENDING:
-      return blue[300]
+      return blue[400]
     case EStatus.DOING:
-      return '#fff'
+      return yellow[400]
     case EStatus.LATE:
-      return pink[300]
+      return red[400]
     case EStatus.ALMOST_DONE:
-      return yellow[300]
+      return orange[400]
     case EStatus.DONE:
-      return green[300]
+      return green[400]
     default:
-      return blue[300]
+      return blue[400]
   }
 }
