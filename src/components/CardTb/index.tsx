@@ -1,10 +1,10 @@
-import { Box } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import React from 'react'
 import Grid, { GridFlexEnd, GridFlexStart } from '../../components/Grid'
+import { useExpand } from '../../hooks/Expand'
 import { ExpandIconButtonSmall } from '../IconButton'
 import { TypographyBold } from '../Typography'
-import { CardThSorteableIconButton } from './IconButton'
-import { StyledCard } from './style'
+import { StyledCard, StyledTypography } from './style'
 
 interface ICardTbProps {
   onClick?: () => void
@@ -80,13 +80,20 @@ export const CardThSorteableCell: React.FC<ICardThSorteableCellProps> = ({
   onClick,
   text,
   sm,
-}) => (
-  <Grid item sm={sm}>
-    <Box marginLeft={0.5}>
-      <Grid container>
-        <TypographyBold variant="subtitle2" text={text} color="#fff" />
-        <CardThSorteableIconButton onClick={onClick} />
-      </Grid>
-    </Box>
-  </Grid>
-)
+}) => {
+  const { expand, onExpand } = useExpand()
+
+  const handleSortClick = () => {
+    onClick()
+    onExpand()
+  }
+
+  return (
+    <Grid item sm={sm}>
+      <Stack direction="row" spacing={0.5} marginLeft={0.5}>
+        <StyledTypography variant="subtitle2">{text}</StyledTypography>
+        <ExpandIconButtonSmall expand={expand} onClick={handleSortClick} />
+      </Stack>
+    </Grid>
+  )
+}

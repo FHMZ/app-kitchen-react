@@ -3,12 +3,8 @@ import { IComplementItem, ISubItem } from '../../models/item'
 import { TypographyBold } from '../Typography'
 import { StyledQuantityLabel, StyledTypography } from './style'
 
-interface ISubItemProps {
-  orderItems: ISubItem[]
-}
-
-interface IComplementItemProps {
-  orderItems: IComplementItem[]
+interface ISubItemProps<T> {
+  orderItems: T[]
 }
 
 interface IObservationProps {
@@ -19,20 +15,9 @@ interface IQuantityLabelProps {
   quantity: React.ReactNode
 }
 
-export const SubItemListItem: React.FC<ISubItemProps> = ({ orderItems }) => (
-  <>
-    {orderItems !== undefined &&
-      orderItems.map((subItem, i) => (
-        <StyledTypography key={i} variant="button">
-          {subItem.description}
-        </StyledTypography>
-      ))}
-  </>
-)
-
-export const ComplementListItem: React.FC<IComplementItemProps> = ({
+export const ListSubItem = ({
   orderItems,
-}) => (
+}: ISubItemProps<ISubItem | IComplementItem>) => (
   <>
     {orderItems !== undefined &&
       orderItems.map((subItem, i) => (

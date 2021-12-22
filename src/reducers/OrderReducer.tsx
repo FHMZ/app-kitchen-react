@@ -42,6 +42,11 @@ export const formOrderCardListReducer = (
         ...state,
         orderItemStatusId: EStatusId.DOING,
       }
+    case EStatus.DOING:
+      return {
+        ...state,
+        orderItemStatusId: EStatusId.DONE,
+      }
     case EStatus.DOING || EStatus.LATE || EStatus.ALMOST_DONE:
       return {
         ...state,

@@ -1,8 +1,4 @@
-import { Drawer, styled } from '@mui/material';
-import { BOX_SHADOW } from './../../../../utils/constants';
-
-export const StyledDrawer = styled(Drawer)(() => ({
-}))
+import { styled } from '@mui/material';
 
 export const StyledDrawerHeader = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(2),

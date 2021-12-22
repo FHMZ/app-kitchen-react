@@ -29,7 +29,7 @@ export type TSizes = 'small' | 'medium' | 'large' | undefined
 
 export type TAlertColors = 'success' | 'info' | 'warning' | 'error'
 
-export type TEdges = false | 'end' | 'start' | undefined
+export type TEdges = false | 'end' | 'start'
 
 export type TOrderStatus =
   | 'Pendente'

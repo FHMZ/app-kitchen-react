@@ -3,9 +3,8 @@ import { IconButton } from '@mui/material'
 import React from 'react'
 import ListItem from '../../../../components/ListItem'
 import {
-  ComplementListItem,
+  ListSubItem,
   ObservationLabel,
-  SubItemListItem
 } from '../../../../components/OrderTypography'
 import { IRecallItem } from '../../../../models/recall'
 
@@ -19,8 +18,8 @@ const RecallCardListItem: React.FC<IRecallCardListItemProps> = ({ item }) => (
     primary={item.description}
     secondary={
       <>
-        <ComplementListItem orderItems={item.complementItemList} />
-        <SubItemListItem orderItems={item.subItemList} />
+        <ListSubItem orderItems={item.complementItemList} />
+        <ListSubItem orderItems={item.subItemList} />
         <ObservationLabel observation={item.observation} />
       </>
     }
