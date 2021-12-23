@@ -5,18 +5,18 @@ import { StyledExpand } from './style'
 
 interface IExpandIconButtonProps {
   edge?: TEdges
-  expand: boolean
+  clickIn: boolean
   onClick: () => void
 }
 
 export const ExpandIconButtonSmall: React.FC<IExpandIconButtonProps> = ({
   edge,
-  expand,
+  clickIn,
   onClick,
 }) => (
   <StyledExpand
     size="small"
-    expand={expand}
+    clickIn={clickIn}
     edge={edge}
     color="default"
     onClick={onClick}

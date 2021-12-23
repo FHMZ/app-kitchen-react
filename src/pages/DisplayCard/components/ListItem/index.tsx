@@ -2,15 +2,14 @@ import AlarmOnIcon from '@mui/icons-material/AlarmOnRounded'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForwardRounded'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecordRounded'
 import RemoveIcon from '@mui/icons-material/RemoveRounded'
-import { Collapse } from '@mui/material'
 import React from 'react'
 import { ExpandIconButtonSmall } from '../../../../components/IconButton'
 import ListItem from '../../../../components/ListItem'
 import {
   ListSubItem,
-  ObservationLabel,
+  ObservationLabel
 } from '../../../../components/OrderTypography'
-import { useExpand } from '../../../../hooks/Expand'
+import { useSwitch } from '../../../../hooks/SwitchKey'
 import { IOrderItem } from '../../../../models/item'
 import { EStatusId } from '../../../../utils/enums'
 
@@ -19,7 +18,7 @@ interface ICardListItemProps {
 }
 
 const CardListItem: React.FC<ICardListItemProps> = ({ item }) => {
-  const { expand, onExpand } = useExpand()
+  const { switchKey, onSwitchKey } = useSwitch()
 
   const StationStatusIcon = () => {
     const statusId = item.status.id
@@ -36,18 +35,20 @@ const CardListItem: React.FC<ICardListItemProps> = ({ item }) => {
 
   return (
     <ListItem
+      icon={<StationStatusIcon />}
       quantity={item.quantity}
       primary={item.description}
-      icon={<StationStatusIcon />}
       secondary={
-        <Collapse in={expand} timeout="auto" unmountOnExit>
+        // <Collapse in={expand} unmountOnExit>
+        <>
           <ListSubItem orderItems={item.complementItemList} />
           <ListSubItem orderItems={item.subItemList} />
           <ObservationLabel observation={item.observation} />
-        </Collapse>
+        </>
+        // </Collapse>
       }
       secondaryAction={
-        <ExpandIconButtonSmall edge="end" expand={expand} onClick={onExpand} />
+        <ExpandIconButtonSmall edge="end" clickIn={switchKey} onClick={onSwitchKey} />
       }
     />
   )

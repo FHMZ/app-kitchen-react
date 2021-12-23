@@ -8,8 +8,7 @@ import { HeaderButton } from '../../components/Header/Button'
 import MainShrinkRight from '../../components/Main'
 import SnackbarAlert from '../../components/Snackbar'
 import SwipeableDrawer from '../../components/SwipeableDrawer'
-import { useMenuDrawer, useSwipeableDrawer } from '../../hooks/Drawer'
-import { useSnackbarAlert } from '../../hooks/Snackbar'
+import { useDrawer, useSnackbarAlert, useSwitch } from '../../hooks/SwitchKey'
 import { ALL_DAY_KEY, RECALL_KEY } from '../../utils/constants'
 import { AllDayDrawer } from './components/Drawer'
 import { Container, StyledHeaderContent } from './style'
@@ -19,8 +18,8 @@ interface ICardLayoutProps {
 }
 
 const CardLayout: React.FC<ICardLayoutProps> = ({ children }) => {
-  const { onSwipeableDrawerOpen, swipeableDrawerOpen } = useSwipeableDrawer()
-  const { onMenuDrawerOpen, drawerOpen } = useMenuDrawer()
+  const { switchKey, onSwitchKey } = useSwitch()
+  const { drawerOpen, onMenuDrawerOpen } = useDrawer()
   const { snackbarAlertOpen, onSnackbarAlertOpen } = useSnackbarAlert()
 
   const history = useHistory()
@@ -53,7 +52,7 @@ const CardLayout: React.FC<ICardLayoutProps> = ({ children }) => {
   return (
     <>
       <Container>
-        <Header shrinkRight={drawerOpen} onMenuClick={onSwipeableDrawerOpen}>
+        <Header shrinkRight={drawerOpen} onMenuClick={onSwitchKey}>
           <StyledHeaderContent>
             <HeaderButton
               text="Pedidos Ativos"
@@ -75,9 +74,9 @@ const CardLayout: React.FC<ICardLayoutProps> = ({ children }) => {
         </Header>
         <MainShrinkRight open={drawerOpen}>{children}</MainShrinkRight>
         <SwipeableDrawer
-          open={swipeableDrawerOpen}
-          onOpen={onSwipeableDrawerOpen}
-          onClose={onSwipeableDrawerOpen}
+          open={switchKey}
+          onOpen={onSwitchKey}
+          onClose={onSwitchKey}
         />
         <AllDayDrawer open={drawerOpen} />
       </Container>

@@ -22,7 +22,9 @@ export const formOrderReducer = (
         ...state,
         statusId: EStatusId.DOING,
       }
-    case EStatus.DOING || EStatus.LATE || EStatus.ALMOST_DONE:
+    case EStatus.DOING:
+    case EStatus.LATE:
+    case EStatus.ALMOST_DONE:
       return {
         ...state,
         statusId: EStatusId.DONE,
@@ -43,11 +45,8 @@ export const formOrderCardListReducer = (
         orderItemStatusId: EStatusId.DOING,
       }
     case EStatus.DOING:
-      return {
-        ...state,
-        orderItemStatusId: EStatusId.DONE,
-      }
-    case EStatus.DOING || EStatus.LATE || EStatus.ALMOST_DONE:
+    case EStatus.LATE:
+    case EStatus.ALMOST_DONE:
       return {
         ...state,
         orderItemStatusId: EStatusId.DONE,

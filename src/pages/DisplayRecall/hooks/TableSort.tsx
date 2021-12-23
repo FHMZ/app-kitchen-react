@@ -1,7 +1,14 @@
 import { useState } from 'react'
+import { IRecall } from '../../../models/recall'
 
-export const useCardTbSorteableKey = (arrayList: Array<object>) => {
+export const useRecall = (recallOrders: IRecall[]) => {
   const [isIncreasing, setIsIncreasing] = useState(true)
+  // const [recallOrders, setRecallOrders] = useState<IRecall[]>([])
+
+  // useEffect(() => {
+  //   const res = require('../../../assets/mocks/orderRecalls.json')
+  //   res && setRecallOrders(res)
+  // }, [recallOrders])
 
   const handleIncreasing = () => setIsIncreasing(!isIncreasing)
 
@@ -19,9 +26,9 @@ export const useCardTbSorteableKey = (arrayList: Array<object>) => {
 
   const onSortByKey = (key: string) => {
     if (isIncreasing) {
-      arrayList.sort((a, b) => handleSortAsc(a, b, key))
+      recallOrders.sort((a, b) => handleSortAsc(a, b, key))
     } else {
-      arrayList.sort((a, b) => handleSortDesc(a, b, key))
+      recallOrders.sort((a, b) => handleSortDesc(a, b, key))
     }
     handleIncreasing()
   }

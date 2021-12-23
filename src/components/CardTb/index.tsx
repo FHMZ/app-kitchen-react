@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material'
 import React from 'react'
 import Grid, { GridFlexEnd, GridFlexStart } from '../../components/Grid'
-import { useExpand } from '../../hooks/Expand'
+import { useSwitch } from '../../hooks/SwitchKey'
 import { ExpandIconButtonSmall } from '../IconButton'
 import { TypographyBold } from '../Typography'
 import { StyledCard, StyledTypography } from './style'
@@ -24,6 +24,7 @@ interface ICardThProps {
 
 interface ICardThSorteableCellProps {
   onClick: (sortKey?: string) => any
+  //sortKey: string
   text?: string
   sm: number
 }
@@ -61,7 +62,7 @@ export const CardTbButtonCell: React.FC<ICardTbButtonCellProps> = ({
 }) => (
   <GridFlexEnd sm={sm}>
     <Box margin={0.5}>
-      <ExpandIconButtonSmall expand={expand} onClick={onClick} />
+      <ExpandIconButtonSmall clickIn={expand} onClick={onClick} />
     </Box>
   </GridFlexEnd>
 )
@@ -78,21 +79,22 @@ export const CardThCell: React.FC<ICardCellProps> = ({ text, sm }) => (
 
 export const CardThSorteableCell: React.FC<ICardThSorteableCellProps> = ({
   onClick,
+  //sortKey,
   text,
   sm,
 }) => {
-  const { expand, onExpand } = useExpand()
+  const { switchKey, onSwitchKey } = useSwitch()
 
   const handleSortClick = () => {
     onClick()
-    onExpand()
+    onSwitchKey()
   }
 
   return (
     <Grid item sm={sm}>
       <Stack direction="row" spacing={0.5} marginLeft={0.5}>
         <StyledTypography variant="subtitle2">{text}</StyledTypography>
-        <ExpandIconButtonSmall expand={expand} onClick={handleSortClick} />
+        <ExpandIconButtonSmall clickIn={switchKey} onClick={handleSortClick} />
       </Stack>
     </Grid>
   )

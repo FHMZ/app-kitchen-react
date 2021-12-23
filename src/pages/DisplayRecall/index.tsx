@@ -8,7 +8,7 @@ import { GridContainer } from '../../components/Grid'
 import OrderLayout from '../../layouts/DisplayOrder'
 import { IRecall } from '../../models/recall'
 import RecallCardList from './components/Card'
-import { useCardTbSorteableKey } from './hooks/TableSort'
+import { useRecall } from './hooks/TableSort'
 
 const DisplayRecall: React.FC = () => {
   const [recallOrders, setRecallOrders] = useState<IRecall[]>([])
@@ -19,34 +19,35 @@ const DisplayRecall: React.FC = () => {
   }, [])
 
   // todo: colocar essa funcao dentro d componente CardThSorteableCell
-  const { onSortByKey } = useCardTbSorteableKey(recallOrders)
+  const { onSortByKey } = useRecall(recallOrders)
+
   return (
     <OrderLayout>
       <GridContainer>
         <CardTh>
           <CardThSorteableCell
             text="Pedido"
-            onClick={() => onSortByKey('')}
+            onClick={() => onSortByKey('orderNumber')}
             sm={2}
           />
           <CardThSorteableCell
             text="Horário"
-            onClick={() => onSortByKey('')}
+            onClick={() => onSortByKey('orderNumber')}
             sm={2}
           />
           <CardThSorteableCell
             text="Servidor"
-            onClick={() => onSortByKey('')}
+            onClick={() => onSortByKey('orderNumber')}
             sm={2}
           />
           <CardThSorteableCell
             text="Canal"
-            onClick={() => onSortByKey('')}
+            onClick={() => onSortByKey('orderNumber')}
             sm={2}
           />
           <CardThSorteableCell
             text="Itens"
-            onClick={() => onSortByKey('')}
+            onClick={() => onSortByKey('orderNumber')}
             sm={3}
           />
           <CardThCell text="" sm={1} />
