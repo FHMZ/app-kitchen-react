@@ -20,9 +20,16 @@ export enum EKdsReducerTypes {
 }
 
 export enum EEntryTypeId {
-  DELIVERY = 2
+  DELIVERY = 2,
 }
 
 export enum EEntryType {
-  DELIVERY = "Delivery"
+  DELIVERY = 'Delivery',
+}
+
+export enum EOrderRecallTypes {
+  RECALL = 'recall',
+  RECALL_ITEM = 'recall_item',
+  SORT_ASC = 'asc',
+  SORT_DESC = 'desc',
 }

@@ -2,6 +2,7 @@ import { Box, Stack } from '@mui/material'
 import React from 'react'
 import Grid, { GridFlexEnd, GridFlexStart } from '../../components/Grid'
 import { useSwitch } from '../../hooks/SwitchKey'
+import { useRecall } from '../../pages/DisplayRecall/hooks/TableSort'
 import { ExpandIconButtonSmall } from '../IconButton'
 import { TypographyBold } from '../Typography'
 import { StyledCard, StyledTypography } from './style'
@@ -81,10 +82,11 @@ export const CardThSorteableCell: React.FC<ICardThSorteableCellProps> = ({
   text,
   sm,
 }) => {
+  const { onSortByKey } = useRecall()
   const { switchKey, onSwitchKey } = useSwitch()
 
   const handleSortClick = () => {
-    onClick()
+    onSortByKey('orderNumber')
     onSwitchKey()
   }
 

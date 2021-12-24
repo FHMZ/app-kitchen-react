@@ -11,14 +11,14 @@ import RecallCardList from './components/Card'
 import { useRecall } from './hooks/TableSort'
 
 const DisplayRecall: React.FC = () => {
-  const [recallOrders, setRecallOrders] = useState<IRecall[]>([])
+  // const [recallOrders, setRecallOrders] = useState<IRecall[]>([])
 
-  const { onSortByKey } = useRecall(recallOrders)
+  const { state, onSortByKey } = useRecall()
 
-  useEffect(() => {
-    const res = require('../../assets/mocks/orderRecalls.json')
-    res && setRecallOrders(res)
-  }, [])
+  // useEffect(() => {
+  //   const res = require('../../assets/mocks/orderRecalls.json')
+  //   res && setRecallOrders(res)
+  // }, [])
 
   return (
     <OrderLayout>
@@ -51,7 +51,7 @@ const DisplayRecall: React.FC = () => {
           />
           <CardThCell text="" sm={1} />
         </CardTh>
-        {recallOrders.map((order, i) => (
+        {state.map((order, i) => (
           <RecallCardList key={i} recallOrder={order} />
         ))}
       </GridContainer>
