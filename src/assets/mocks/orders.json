@@ -1,0 +1,690 @@
+[
+    {
+        "id": 1111,
+        "orderNumber": 1517,
+        "entryType": {
+            "id": 2,
+            "description": "Delivery"
+        },
+        "orderTime": "12:45",
+        "checkTime": 9,
+        "checkDate": "10/12/2021",
+        "server": "Wendy",
+        "referenceOrder": 1517,
+        "orderCount": 1,
+        "sortingPriority": 2,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 1,
+            "description": "Pendente"
+        },
+        "remainingPreparationTime": 0,
+        "orderTimeInMinutes": 9,
+        "remainingPreparationTimeString": "9min 30s",
+        "tableAndAccount": "null/null",
+        "stationList": [
+            {
+                "id": 5,
+                "description": "Plato Nacho",
+                "statusId": 2
+            },
+            {
+                "id": 4,
+                "description": "Fry",
+                "statusId": 4
+            },
+            {
+                "id": 6,
+                "description": "Broiler",
+                "statusId": 4
+            }
+        ],
+        "itemList": [
+            {
+                "id": 2468,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {},
+                "complementItemList": [
+                    {
+                        "id": 1112,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1250,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 4,
+                            "description": "Concluido"
+                        }
+                    },
+                    {
+                        "id": 1249,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 4,
+                            "description": "Concluido"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2469,
+                "itemId": 5,
+                "description": "ARROZ",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {},
+                "complementItemList": [
+                    {
+                        "id": 1113,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2470,
+                "itemId": 10,
+                "description": "SORVETE",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 2,
+                    "description": "Atendimento"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1116,
+        "orderNumber": 1522,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "20:38",
+        "checkTime": 9,
+        "checkDate": "10/12/2021",
+        "server": "Rafael",
+        "referenceOrder": 1522,
+        "orderCount": 1,
+        "sortingPriority": 2,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "remainingPreparationTime": 0,
+        "orderTimeInMinutes": 9,
+        "remainingPreparationTimeString": "9min 6s",
+        "tableAndAccount": "null/null",
+        "stationList": [
+            {
+                "id": 5,
+                "description": "Plato Nacho",
+                "statusId": 3
+            },
+            {
+                "id": 4,
+                "description": "Fry",
+                "statusId": 3
+            },
+            {
+                "id": 6,
+                "description": "Broiler",
+                "statusId": 4
+            }
+        ],
+        "itemList": [
+            {
+                "id": 2481,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {},
+                "complementItemList": [
+                    {
+                        "id": 1120,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1258,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1257,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 4,
+                            "description": "Concluido"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2482,
+                "itemId": 5,
+                "description": "MACARRÃO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "complementItemList": [
+                    {
+                        "id": 1121,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2483,
+                "itemId": 10,
+                "description": "SORVETE",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1118,
+        "orderNumber": 1524,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "20:39",
+        "checkTime": 9,
+        "checkDate": "10/12/2021",
+        "server": "Rafael",
+        "referenceOrder": 1524,
+        "orderCount": 1,
+        "sortingPriority": 2,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "remainingPreparationTime": 0,
+        "orderTimeInMinutes": 9,
+        "remainingPreparationTimeString": "9min 59s",
+        "tableAndAccount": "null/null",
+        "stationList": [
+            {
+                "id": 5,
+                "description": "Plato Nacho",
+                "statusId": 3
+            },
+            {
+                "id": 4,
+                "description": "Fry",
+                "statusId": 3
+            },
+            {
+                "id": 6,
+                "description": "Broiler",
+                "statusId": 3
+            }
+        ],
+        "itemList": [
+            {
+                "id": 2487,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {},
+                "complementItemList": [
+                    {
+                        "id": 1124,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1262,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1261,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2488,
+                "itemId": 5,
+                "description": "MACARRÃO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "complementItemList": [
+                    {
+                        "id": 1125,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2489,
+                "itemId": 10,
+                "description": "SORVETE",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1119,
+        "orderNumber": 1525,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "20:52",
+        "checkTime": 0,
+        "checkDate": "10/12/2021",
+        "server": "Caixa",
+        "referenceOrder": 345,
+        "orderCount": 1,
+        "sortingPriority": 2,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 3,
+            "description": "Atrasado"
+        },
+        "remainingPreparationTime": 0,
+        "orderTimeInMinutes": 0,
+        "remainingPreparationTimeString": "0min 28s",
+        "tableAndAccount": "null/null",
+        "stationList": [
+            {
+                "id": 5,
+                "description": "Plato Nacho",
+                "statusId": 1
+            },
+            {
+                "id": 4,
+                "description": "Fry",
+                "statusId": 3
+            },
+            {
+                "id": 6,
+                "description": "Broiler",
+                "statusId": 1
+            }
+        ],
+        "itemList": [
+            {
+                "id": 2490,
+                "itemId": 158,
+                "description": "CRISPY FILET",
+                "preparationTimeItem": -4,
+                "quantity": 1,
+                "price": 11.63,
+                "station": {
+                    "id": 4
+                },
+                "complementItemList": [
+                    {
+                        "id": 1126,
+                        "complementItemId": 781,
+                        "description": "Mal Passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    },
+                    {
+                        "id": 1127,
+                        "complementItemId": 158,
+                        "description": "Mal Passado",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1120,
+        "orderNumber": 1526,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "20:55",
+        "checkTime": 4,
+        "checkDate": "10/12/2021",
+        "server": "Caixa",
+        "referenceOrder": 343,
+        "orderCount": 1,
+        "sortingPriority": 2,
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 5,
+            "description": "Quase Pronto"
+        },
+        "remainingPreparationTime": 0,
+        "orderTimeInMinutes": 4,
+        "remainingPreparationTimeString": "4min 16s",
+        "tableAndAccount": "null/null",
+        "stationList": [
+            {
+                "id": 5,
+                "description": "Plato Nacho",
+                "statusId": 3
+            },
+            {
+                "id": 4,
+                "description": "Fry",
+                "statusId": 1
+            },
+            {
+                "id": 6,
+                "description": "Broiler",
+                "statusId": 3
+            }
+        ],
+        "itemList": [
+            {
+                "id": 2491,
+                "itemId": 156,
+                "description": "RIBEYE",
+                "preparationTimeItem": 4,
+                "quantity": 1,
+                "price": 25.90,
+                "station": {},
+                "complementItemList": [
+                    {
+                        "id": 1128,
+                        "complementItemId": 781,
+                        "description": "Ponto Bem",
+                        "preparationTimeComplementItem": 2,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    },
+                    {
+                        "id": 1129,
+                        "complementItemId": 156,
+                        "description": "Ponto Bem, Manteiga",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1264,
+                        "subItemId": 237,
+                        "description": "[11037] PAO COM MANTEIGA",
+                        "preparationTimeSubItem": 2,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 5
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1263,
+                        "subItemId": 781,
+                        "description": "[925016] X MIGNON",
+                        "preparationTimeSubItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ]
+    }
+]

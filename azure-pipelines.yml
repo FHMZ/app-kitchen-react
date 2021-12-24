@@ -1,0 +1,19 @@
+resources:
+- repo: self
+trigger:
+- develop
+pool: 
+  vmImage: 'Ubuntu-20.04'
+variables:
+  DockerImageName: 'us.gcr.io/srlab-devsecops/$(Build.Repository.Name)'
+  Namespace: $(NAME_SPACE)
+steps:
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    containerRegistry: 'gcr-srlab-devsecops'
+    repository: 'srlab-devsecops/$(Build.Repository.Name)'
+    command: buildAndPush
+    ImageName: '$(DockerImageName):$(Build.BuildNumber)'
+    tags: |
+      $(Build.BuildNumber)

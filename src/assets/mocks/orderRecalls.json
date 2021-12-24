@@ -1,0 +1,747 @@
+[
+    {
+        "id": 1117,
+        "orderNumber": 1523,
+        "entryType": {
+            "id": 2,
+            "description": "Delivery"
+        },
+        "orderTime": "20:38",
+        "checkTime": 9,
+        "server": "Rafael",
+        "checkDate": "10/12/2021",
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 4,
+            "description": "Concluido"
+        },
+        "remainingPreparationTime": 5,
+        "itemList": [
+            {
+                "id": 2485,
+                "itemId": 5,
+                "description": "MACARRÃO",
+                "shortName": "MACARRÃO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "complementItemList": [
+                    {
+                        "id": 1123,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 1,
+                    "description": "Pendente"
+                }
+            },
+            {
+                "id": 2486,
+                "itemId": 10,
+                "description": "SORVETE",
+                "shortName": "CASQUINHA",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 1,
+                    "description": "Pendente"
+                }
+            },
+            {
+                "id": 2484,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "shortName": "HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": null
+                },
+                "complementItemList": [
+                    {
+                        "id": 1122,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1260,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    },
+                    {
+                        "id": 1259,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 2,
+                    "description": "Atendimento"
+                }
+            }
+        ],
+        "concatenatedShortDescription": "MACARRÃO;CASQUINHA;HAMBURGUER"
+    },
+    {
+        "id": 1115,
+        "orderNumber": 1521,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "20:03",
+        "checkTime": 9,
+        "server": "Rafael",
+        "checkDate": "10/12/2021",
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 4,
+            "description": "Concluido"
+        },
+        "remainingPreparationTime": 0,
+        "itemList": [
+            {
+                "id": 2480,
+                "itemId": 10,
+                "description": "SORVETE",
+                "shortName": "CASQUINHA",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2478,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "shortName": "HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": null
+                },
+                "complementItemList": [
+                    {
+                        "id": 1118,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1256,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1255,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2479,
+                "itemId": 5,
+                "description": "MACARRÃO",
+                "shortName": "MACARRÃO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "complementItemList": [
+                    {
+                        "id": 1119,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ],
+        "concatenatedShortDescription": "CASQUINHA;HAMBURGUER;MACARRÃO"
+    },
+    {
+        "id": 1114,
+        "orderNumber": 1520,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "19:51",
+        "checkTime": 360,
+        "server": "Caixa",
+        "checkDate": "10/12/2021",
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 4,
+            "description": "Concluido"
+        },
+        "remainingPreparationTime": 311,
+        "itemList": [
+            {
+                "id": 2477,
+                "itemId": 4,
+                "description": "BONELESS",
+                "shortName": "BONELESS",
+                "preparationTimeItem": 360,
+                "quantity": 1,
+                "price": 44.90,
+                "station": {
+                    "id": 4
+                },
+                "status": {
+                    "id": 2,
+                    "description": "Atendimento"
+                }
+            }
+        ],
+        "concatenatedShortDescription": "BONELESS"
+    },
+    {
+        "id": 1113,
+        "orderNumber": 1519,
+        "entryType": {
+            "id": 2,
+            "description": "Delivery"
+        },
+        "orderTime": "19:49",
+        "checkTime": 9,
+        "server": "Rafael",
+        "checkDate": "10/12/2021",
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 4,
+            "description": "Concluido"
+        },
+        "remainingPreparationTime": 0,
+        "itemList": [
+            {
+                "id": 2476,
+                "itemId": 10,
+                "description": "SORVETE",
+                "shortName": "CASQUINHA",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2474,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "shortName": "HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": null
+                },
+                "complementItemList": [
+                    {
+                        "id": 1116,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1254,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1253,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2475,
+                "itemId": 5,
+                "description": "MACARRÃO",
+                "shortName": "MACARRÃO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "complementItemList": [
+                    {
+                        "id": 1117,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ],
+        "concatenatedShortDescription": "CASQUINHA;HAMBURGUER;MACARRÃO"
+    },
+    {
+        "id": 1112,
+        "orderNumber": 1518,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "19:48",
+        "checkTime": 9,
+        "server": "Rafael",
+        "checkDate": "10/12/2021",
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 4,
+            "description": "Concluido"
+        },
+        "remainingPreparationTime": 0,
+        "itemList": [
+            {
+                "id": 2473,
+                "itemId": 10,
+                "description": "SORVETE",
+                "shortName": "CASQUINHA",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2471,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "shortName": "HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": null
+                },
+                "complementItemList": [
+                    {
+                        "id": 1114,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1252,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1251,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2472,
+                "itemId": 5,
+                "description": "MACARRÃO",
+                "shortName": "MACARRÃO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "complementItemList": [
+                    {
+                        "id": 1115,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ],
+        "concatenatedShortDescription": "CASQUINHA;HAMBURGUER;MACARRÃO"
+    },
+    {
+        "id": 1110,
+        "orderNumber": 1516,
+        "entryType": {
+            "id": 1,
+            "description": "Salão"
+        },
+        "orderTime": "12:45",
+        "checkTime": 9,
+        "server": "Wendy",
+        "checkDate": "10/12/2021",
+        "store": {
+            "id": 1,
+            "description": "Matriz"
+        },
+        "status": {
+            "id": 4,
+            "description": "Concluido"
+        },
+        "remainingPreparationTime": 0,
+        "itemList": [
+            {
+                "id": 2467,
+                "itemId": 10,
+                "description": "SORVETE",
+                "shortName": "CASQUINHA",
+                "preparationTimeItem": 2,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": 5
+                },
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            },
+            {
+                "id": 2466,
+                "itemId": 5,
+                "description": "ARROZ",
+                "shortName": "ARROZ BRANCO",
+                "preparationTimeItem": 3,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": null
+                },
+                "complementItemList": [
+                    {
+                        "id": 1111,
+                        "complementItemId": 7,
+                        "description": "Sem sal",
+                        "preparationTimeComplementItem": 0,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 4,
+                    "description": "Concluido"
+                }
+            },
+            {
+                "id": 2465,
+                "itemId": 1,
+                "description": "COMBO HAMBURGUER",
+                "shortName": "HAMBURGUER",
+                "preparationTimeItem": 9,
+                "quantity": 1,
+                "price": 30.00,
+                "observation": "teste",
+                "station": {
+                    "id": null
+                },
+                "complementItemList": [
+                    {
+                        "id": 1110,
+                        "complementItemId": 20,
+                        "description": "Mal passado",
+                        "preparationTimeComplementItem": -4,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 0
+                        },
+                        "status": {
+                            "id": 2,
+                            "description": "Atendimento"
+                        }
+                    }
+                ],
+                "subItemList": [
+                    {
+                        "id": 1248,
+                        "subItemId": 8,
+                        "description": "BATATA FRITA",
+                        "preparationTimeSubItem": 5,
+                        "quantity": 1,
+                        "price": 0.00,
+                        "station": {
+                            "id": 4
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    },
+                    {
+                        "id": 1247,
+                        "subItemId": 2,
+                        "description": "HAMBURGUER",
+                        "preparationTimeSubItem": 8,
+                        "quantity": 2,
+                        "price": 0.00,
+                        "station": {
+                            "id": 6
+                        },
+                        "status": {
+                            "id": 3,
+                            "description": "Atrasado"
+                        }
+                    }
+                ],
+                "status": {
+                    "id": 3,
+                    "description": "Atrasado"
+                }
+            }
+        ],
+        "concatenatedShortDescription": "CASQUINHA;ARROZ BRANCO;HAMBURGUER"
+    }
+]
